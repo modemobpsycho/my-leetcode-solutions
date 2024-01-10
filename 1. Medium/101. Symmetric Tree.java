@@ -14,6 +14,7 @@ class TreeNode {
     this.val = val;
     this.left = left;
     this.right = right;
+
   }
 }
 
@@ -23,6 +24,7 @@ class Solution {
       return true;
     }
     return Mirror(root.left, root.right);
+    
   }
 
   public boolean Mirror(TreeNode a, TreeNode b) {
