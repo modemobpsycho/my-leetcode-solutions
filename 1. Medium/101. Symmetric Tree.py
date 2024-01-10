@@ -12,6 +12,7 @@ class Solution:
             return p.val == q.val and self.recursive(p.left, q.right) and self.recursive(p.right, q.left)
         else:
             return p == q
+        
 
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         p = root.left
