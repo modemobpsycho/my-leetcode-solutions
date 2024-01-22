@@ -4,6 +4,9 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+from typing import Optional
+
+
 class Solution:
     def minDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
