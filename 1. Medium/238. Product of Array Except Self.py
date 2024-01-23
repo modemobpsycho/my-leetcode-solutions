@@ -1,6 +1,9 @@
+from typing import List
+
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        ans = [1]
+        ans: list[int] = [1]
 
         for i in range(1, len(nums)):
             ans.append(ans[-1] * nums[i - 1])

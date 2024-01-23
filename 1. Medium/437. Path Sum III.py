@@ -1,16 +1,16 @@
-from typing import Optional
+from typing import Any, Literal, Optional
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+    def __init__(self, val=0, left=None, right=None) -> None:
+        self.val: int = val
+        self.left: Any | None = left
+        self.right: Any | None = right
 
 
 class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
-        def dfs(node, target):
+        def dfs(node, target) -> Any | Literal[0]:
             if not node:
                 return 0
             count = 0

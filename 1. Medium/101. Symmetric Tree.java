@@ -24,7 +24,7 @@ class Solution {
       return true;
     }
     return Mirror(root.left, root.right);
-    
+
   }
 
   public boolean Mirror(TreeNode a, TreeNode b) {

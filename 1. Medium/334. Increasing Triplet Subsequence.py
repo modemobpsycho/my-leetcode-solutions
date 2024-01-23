@@ -6,9 +6,9 @@ class Solution:
         first = second = float("inf")
         for n in nums:
             if n <= first:
-                first = n
+                first: int = n
             elif n <= second:
-                second = n
+                second: int = n
             else:
                 return True
         return False

@@ -8,12 +8,12 @@ def metrika_wrapper(callback: Callable[..., None]) -> Callable[..., dict[str, An
 
     def wrapper(user: dict[str, Any]) -> list[dict[str, Any]]:
         if user and user["login"] and user["password"] and user["date"]:
-            currStatDay = [
+            currStatDay: list[int] = [
                 i
                 for i, x in enumerate(statDays)
                 if x["date"] == user["date"].strftime("%Y-%m-%d")
             ]
-            isUser = [
+            isUser: list[int] = [
                 i
                 for i, x in enumerate(users)
                 if x["date"] == user["date"].strftime("%Y-%m-%d")
@@ -37,7 +37,7 @@ def metrika_wrapper(callback: Callable[..., None]) -> Callable[..., dict[str, An
     return wrapper
 
 
-def my_function(*args):
+def my_function(*args) -> None:
     print("called")
 
 

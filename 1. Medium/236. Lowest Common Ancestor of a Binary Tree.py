@@ -1,7 +1,10 @@
 # Definition for a binary tree node.
+from typing import Any
+
+
 class TreeNode:
-    def __init__(self, x):
-        self.val = x
+    def __init__(self, x) -> None:
+        self.val: Any = x
         self.left = None
         self.right = None
 
@@ -14,8 +17,8 @@ class Solution:
             return None
         if root == p or root == q:
             return root
-        leftNode = self.lowestCommonAncestor(root.left, p, q)
-        rightNode = self.lowestCommonAncestor(root.right, p, q)
+        leftNode: TreeNode = self.lowestCommonAncestor(root.left, p, q)
+        rightNode: TreeNode = self.lowestCommonAncestor(root.right, p, q)
         if leftNode and rightNode:
             return root
         if leftNode != None:
