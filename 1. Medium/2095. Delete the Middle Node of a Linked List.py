@@ -1,24 +1,24 @@
 # Definition for singly-linked list.
-from typing import Optional
+from typing import Any, Optional
 
 
 class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+    def __init__(self, val=0, next=None) -> None:
+        self.val: int = val
+        self.next: Any = next
 
 
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         n = 0
-        temp = head
-        cur = head
+        temp: ListNode | None = head
+        cur: ListNode | None = head
         while temp:
             n += 1
             temp = temp.next
 
         temp = head
-        x = n // 2
+        x: int = n // 2
         i = 0
 
         if x == 0:

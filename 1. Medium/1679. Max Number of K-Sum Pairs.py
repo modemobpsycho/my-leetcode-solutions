@@ -6,7 +6,7 @@ class Solution:
         nums.sort()
 
         left = 0
-        right = len(nums) - 1
+        right: int = len(nums) - 1
         counter = 0
         while left < right:
             if (nums[left] + nums[right]) == k:

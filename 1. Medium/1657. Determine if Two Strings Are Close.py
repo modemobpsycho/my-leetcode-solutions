@@ -1,7 +1,7 @@
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
-        freq1 = [0] * 26
-        freq2 = [0] * 26
+        freq1: list[int] = [0] * 26
+        freq2: list[int] = [0] * 26
 
         for ch in word1:
             freq1[ord(ch) - ord("a")] += 1

@@ -1,6 +1,6 @@
 class Solution:
     def predictPartyVictory(self, senate: str) -> str:
-        queue = [False] * len(senate)
+        queue: list[bool] = [False] * len(senate)
         order = set()
         skipD, skipR = 0, 0
         while len(order) != 1:

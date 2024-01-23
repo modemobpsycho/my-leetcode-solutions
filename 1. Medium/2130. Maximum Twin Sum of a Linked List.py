@@ -1,11 +1,11 @@
 # Definition for singly-linked list.
-from typing import Optional
+from typing import Any, Optional
 
 
 class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+    def __init__(self, val=0, next=None) -> None:
+        self.val: int = val
+        self.next: Any | None = next
 
 
 class Solution:
@@ -18,7 +18,7 @@ class Solution:
             slow = slow.next
 
         while slow:
-            max_twin_sum = max(max_twin_sum, stack.pop().val + slow.val)
+            max_twin_sum: int = max(max_twin_sum, stack.pop().val + slow.val)
             slow = slow.next
 
         return max_twin_sum

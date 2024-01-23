@@ -1,6 +1,6 @@
 class Solution:
     def removeStars(self, s: str) -> str:
-        ans = []
+        ans: list = []
         for i in s:
             if i == "*":
                 ans.pop()

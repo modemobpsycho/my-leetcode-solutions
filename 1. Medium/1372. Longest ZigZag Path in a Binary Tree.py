@@ -1,17 +1,17 @@
 # Definition for a binary tree node.
-from typing import Optional
+from typing import Any, Optional
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
+    def __init__(self, val=0, left=None, right=None) -> None:
+        self.val: int = val
         self.left = left
         self.right = right
 
 
 class Solution:
     def longestZigZag(self, root: Optional[TreeNode]) -> int:
-        def helper(root, right, total):
+        def helper(root, right, total) -> Any:
             if not root:
                 return total
 

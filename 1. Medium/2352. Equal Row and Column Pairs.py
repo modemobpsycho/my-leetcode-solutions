@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def equalPairs(self, grid: List[List[int]]) -> int:
-        column_starts_with = grid[0]
+        column_starts_with: List[int] = grid[0]
 
         columns = [[] for _ in column_starts_with]
 

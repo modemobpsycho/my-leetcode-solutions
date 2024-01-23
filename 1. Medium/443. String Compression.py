@@ -5,7 +5,7 @@ class Solution:
     def compress(self, chars: List[str]) -> int:
         start_index = 0
         count = 1
-        previous_element = chars[0]
+        previous_element: str = chars[0]
         for i in range(1, len(chars)):
             if chars[i] == previous_element:
                 count += 1
