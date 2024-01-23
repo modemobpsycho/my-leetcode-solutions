@@ -7,5 +7,5 @@ class Solution:
         cont = 0
         for i in gain:
             cont += i
-            ans = max(cont, ans)
+            ans: int = max(cont, ans)
         return ans

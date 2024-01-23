@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def checkIfExist(self, arr: List[int]) -> bool:
         seen = set()

@@ -1,9 +1,11 @@
+from typing import List
+
+
 class Solution:
     def findNumbers(self, nums: List[int]) -> int:
-
-        def helper(num):
+        def helper(num) -> int:
             ret = 0
-            while (num):
+            while num:
                 num //= 10
                 ret += 1
             return ret

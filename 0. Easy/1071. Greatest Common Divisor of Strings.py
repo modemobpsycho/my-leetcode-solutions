@@ -10,5 +10,5 @@ class Solution:
             return str1
 
         else:
-            l_gcd = gcd(len(str1), len(str2))
+            l_gcd: int = gcd(len(str1), len(str2))
             return str1[:l_gcd]

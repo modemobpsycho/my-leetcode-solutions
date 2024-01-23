@@ -5,19 +5,23 @@
 #          otherwise return 0
 # def guess(num: int) -> int:
 
+
+from typing import Any
+
+
 class Solution:
     def guessNumber(self, n: int) -> int:
         l, r = 1, n
 
-        while (l <= r):
-            mid = (l + r) // 2
+        while l <= r:
+            mid: int = (l + r) // 2
 
-            check = guess(mid)
+            check: Any = guess(mid)
 
             if check == 0:
                 return mid
 
             if check < 0:
-                r = mid - 1
+                r: int = mid - 1
             else:
-                l = mid + 1
+                l: int = mid + 1

@@ -2,7 +2,7 @@ from collections import deque
 
 
 class RecentCounter:
-    def __init__(self):
+    def __init__(self) -> None:
         self.counter = 0
         self.queue = deque()
 
@@ -15,8 +15,3 @@ class RecentCounter:
             self.counter -= 1
 
         return self.counter
-
-
-# Your RecentCounter object will be instantiated and called as such:
-# obj = RecentCounter()
-# param_1 = obj.ping(t)
