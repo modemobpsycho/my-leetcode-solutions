@@ -5,9 +5,9 @@ class Solution:
         for car in s:
             if car == " ":
                 if prev != " ":
-                    last = cur
+                    last: int = cur
                     cur = 0
             else:
                 cur += 1
-            prev = car
+            prev: str = car
         return last if not cur else cur
