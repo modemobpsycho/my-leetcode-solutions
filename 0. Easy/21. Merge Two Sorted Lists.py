@@ -1,10 +1,17 @@
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+from typing import Any, Optional
+
+
+class ListNode:
+    def __init__(self, val=0, next=None) -> None:
+        self.val: int = val
+        self.next: Any = next
+
+
 class Solution:
-    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+    def mergeTwoLists(
+        self, list1: Optional[ListNode], list2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         dummy = ListNode()
         tail = dummy
         while list1 and list2:
@@ -14,7 +21,7 @@ class Solution:
             else:
                 tail.next = list2
                 list2 = list2.next
-            tail = tail.next
+            tail: ListNode = tail.next
         if list1:
             tail.next = list1
         elif list2:

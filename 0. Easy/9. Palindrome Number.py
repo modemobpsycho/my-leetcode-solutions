@@ -4,15 +4,15 @@ class Solution:
             return False
 
         new = 0
-        original = x
+        original: int = x
 
         while x:
-            x, d = divmod(x, 10)
-            new = new * 10 + d
+            x, d: int = divmod(x, 10)
+            new: int = new * 10 + d
 
         return new == original
 
 
 class Solution1(object):
-    def isPalindrome(self, x):
+    def isPalindrome(self, x) -> bool:
         return str(x) == str(x)[::-1]

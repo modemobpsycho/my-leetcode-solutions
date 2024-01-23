@@ -8,7 +8,7 @@ class Solution:
 
         s: int = nums[0]
         nums.append(float("inf"))
-        ans = []
+        ans: list = []
         for i in range(1, len(nums)):
             if nums[i] - nums[i - 1] > 1:
                 end: int = nums[i - 1]

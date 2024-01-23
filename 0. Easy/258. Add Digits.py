@@ -3,13 +3,13 @@ class Solution:
 
         while num >= 10:
 
-            cur = num
+            cur: int = num
 
             new_num = 0
 
             while cur:
 
-                cur, d = divmod(cur, 10)
+                cur, d: int = divmod(cur, 10)
 
                 new_num += d
 
