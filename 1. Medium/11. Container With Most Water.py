@@ -1,6 +1,9 @@
+from typing import List, Literal
+
+
 class Solution:
     def maxArea(self, height: List[int]) -> int:
-        l, r = 0, len(height) - 1
+        l: Literal[0], r: int = 0, len(height) - 1
         ans = 0
         while l <= r:
             ans = max(ans, (r - l) * min(height[l], height[r]))

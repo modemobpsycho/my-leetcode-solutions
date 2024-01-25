@@ -1,13 +1,13 @@
 from typing import List
 
 
-def combinationSum(n):
+def combinationSum(n) -> list:
     results = []
     helper(n, [], 1, results)
     return results
 
 
-def helper(target, combination, start, results):
+def helper(target, combination, start, results) -> None:
     if target == 0:
         results.append(combination)
         return
