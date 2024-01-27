@@ -15,7 +15,7 @@ class Solution:
         while fast and fast.next:
             fast = fast.next.next
             stack.append(slow)
-            slow = slow.next
+            slow: Any | None = slow.next
 
         while slow:
             max_twin_sum: int = max(max_twin_sum, stack.pop().val + slow.val)

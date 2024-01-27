@@ -12,7 +12,6 @@ class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         n = 0
         temp: ListNode | None = head
-        cur: ListNode | None = head
         while temp:
             n += 1
             temp = temp.next
