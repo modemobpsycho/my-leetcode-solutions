@@ -7,7 +7,7 @@ class Solution:
         original: int = x
 
         while x:
-            x, d: int = divmod(x, 10)
+            x, d = divmod(x, 10)
             new: int = new * 10 + d
 
         return new == original
